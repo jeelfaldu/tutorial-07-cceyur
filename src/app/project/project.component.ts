@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { student } from '../shared/data';
+import { Data } from '../shared/data';
+
 
 @Component({
   selector: 'app-project',
@@ -32,7 +33,6 @@ export class ProjectComponent implements OnInit {
 
 
   ngOnInit(): void {
-    console.log(student)
   }
 
 }

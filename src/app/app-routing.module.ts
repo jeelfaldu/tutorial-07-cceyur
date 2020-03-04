@@ -3,13 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import {ContentComponent} from "./content/content.component";
 import { ProjectComponent } from './project/project.component';
 import { SignupComponent } from './signup/signup.component';
+import { StudentdetailsComponent } from './studentdetails/studentdetails.component';
 
 
 const routes: Routes = [
   {path:'home',component:ContentComponent,data:{animation:'home'}},
   {path:'project',component:ProjectComponent,data:{animation:'project'}},
   {path:'signup',component:SignupComponent,data:{animation:'signup'}},
-
+  {path:'studentsdetails/:id',component:StudentdetailsComponent,data:{animation:'signup'}},
   {path:'',redirectTo:'home',pathMatch:"full"}
 ];
 

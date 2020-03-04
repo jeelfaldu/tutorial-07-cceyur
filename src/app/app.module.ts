@@ -10,6 +10,7 @@ import { ProjectComponent } from './project/project.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SignupComponent } from './signup/signup.component';
 import { CommonModule } from '@angular/common';
+import { StudentdetailsComponent } from './studentdetails/studentdetails.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { CommonModule } from '@angular/common';
     ContentComponent,
     SignupComponent,
     ProjectComponent,
+    StudentdetailsComponent,
      
   ],
   imports: [
