@@ -5,7 +5,7 @@
     
     <div class="col-lg-4 col-md-6 col-12" *ngFor="let s of student; index as id">
         <div class="card m-1" >
-            <img style="width: 320px;" src="https://cdn.iconscout.com/icon/free/png-256/laptop-user-1-1179329.png"/>
+            <img class=" mx-auto d-block" [src]=s.imgurl />
           
             <div class="card-body text-center ">
                 <a [routerLink]="['/studentsdetails',id]" > <h4  id="name" name="name" class="card-title text-info"> {{s.name}}</h4></a>

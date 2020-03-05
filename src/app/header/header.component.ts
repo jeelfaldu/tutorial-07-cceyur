@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ContentComponent} from '../content/content.component';
 
 @Component({
   selector: 'app-header',
@@ -6,14 +7,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  
+  ismoon : boolean = false;
+  mode :string = "fa fa-moon-o";
   constructor() { }
 
   ngOnInit(): void {
-  }myfunction(event) {
+  }
+  myfunction(event) {    
+    alert("Button is clicked");    
+ }
+
+
+ night(){
+   if(this.ismoon == true){
+    this.ismoon = false;
+    this.mode = "fa fa-moon-o"; 
+    new ContentComponent().mode = false;
+    console.log(this.ismoon);
     
-    alert("Button is clicked");
-    
+   }else if (this.ismoon == false){
+    this.ismoon = true;
+    this.mode = "fa fa-sun-o text-warning";
+    new ContentComponent().mode = true;
+    console.log(this.ismoon);
+   }
  }
 
  

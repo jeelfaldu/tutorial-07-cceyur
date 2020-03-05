@@ -1,8 +1,12 @@
 
-<div class="container">
-<app-header></app-header>
-<main [@routeAnimations]="prepareRoute(outlet)" >
-    <router-outlet #outlet="outlet"></router-outlet>
-</main>
 
+<div [ngClass]="{theme : ismoon } " class="container">
+<app-header ></app-header>
+<div class="custom-control custom-switch"  >
+    <input type="checkbox" (click)="night()" class="custom-control-input" id="customSwitches">
+    <label class="custom-control-label" for="customSwitches"> <i class="{{mode}}"></i></label>
+  </div>
+<main  [@routeAnimations]="prepareRoute(outlet)" >
+    <router-outlet [ngClass]="{color : ismoon }" #outlet="outlet"></router-outlet>
+</main>
 </div>
