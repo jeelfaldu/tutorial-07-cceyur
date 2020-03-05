@@ -15,14 +15,14 @@ import {ContentComponent} from './content/content.component'
 export class AppComponent {
   title = 'Tutorial 07';
   ismoon : boolean = false;
-  mode :string = "fa fa-moon-o";
+  mode :string = "fa fa-moon-o text-info";
   prepareRoute(outlet: RouterOutlet) {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
   }
   night(){
     if(this.ismoon == true){
       this.ismoon = false;
-      this.mode = "fa fa-moon-o";
+      this.mode = "fa fa-moon-o text-info";
       new ContentComponent().data(this.ismoon);
       console.log(this.ismoon);
       
