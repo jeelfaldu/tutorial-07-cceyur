@@ -10,7 +10,7 @@
             <div class="card-body text-center ">
                 <a [routerLink]="['/studentsdetails',id]" > <h4  id="name" name="name" class="card-title text-info"> {{s.name}}</h4></a>
                 <p class="card-text "style="font-size:20px;">   <i class="fas fa-id-card "></i> {{s.Eno}}</p>
-                <a class="btn btn-outline-info">See Profile</a>
+                <a (click)="onClickMe(s)"class="btn btn-outline-info">See Profile</a>
             </div>
         </div>
     </div> 
