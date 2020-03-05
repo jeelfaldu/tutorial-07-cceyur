@@ -7,14 +7,5 @@
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); 
 }
 .nav-link{
-    color: lightslategrey;
-}
-.btn{
-    position: fixed;
-    right: 0;
-    padding: 15px;
-    margin: 5px;
-    border-radius: 5px;
-    background-color:lightgreen;
-    
+    color: #943b5c;
 }
