@@ -15,20 +15,20 @@ import {ContentComponent} from './content/content.component'
 export class AppComponent {
   title = 'Tutorial 07';
   ismoon : boolean = false;
-  mode :string = "fa fa-moon-o text-info";
+  mode :string = "fa fa-sun-o text-warning";
   prepareRoute(outlet: RouterOutlet) {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
   }
   night(){
     if(this.ismoon == true){
       this.ismoon = false;
-      this.mode = "fa fa-moon-o text-info";
+      this.mode = "fa fa-sun-o text-warning";
       new ContentComponent().data(this.ismoon);
       console.log(this.ismoon);
       
      }else if (this.ismoon == false){
       this.ismoon = true;
-      this.mode = "fa fa-sun-o text-warning";
+      this.mode = "fa fa-moon-o text-light";
       new ContentComponent().data(this.ismoon);
       console.log(this.ismoon);
      }

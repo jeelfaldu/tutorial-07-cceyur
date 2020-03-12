@@ -1,6 +1,7 @@
 main{
   position: relative;
-  
+  background-image:url('http://www.script-tutorials.com/demos/360/images/stars.png');
+  background-color:#000; 
 }
 /* Hide scrollbar for Chrome, Safari and Opera */
 body::-webkit-scrollbar {
@@ -13,5 +14,7 @@ body  {
 }
 
 .theme{
-  background-color: lightblue;
+   color: aliceblue  !important;
+    background:#000 url('http://www.script-tutorials.com/demos/360/images/stars.png');
+    
 }
