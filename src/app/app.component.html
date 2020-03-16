@@ -7,6 +7,6 @@
     <label class="custom-control-label" for="customSwitches"> <i class="{{mode}}"></i></label>
   </div>
 <main  [@routeAnimations]="prepareRoute(outlet)" >
-    <router-outlet [ngClass]="{color : ismoon }" #outlet="outlet"></router-outlet>
+    <router-outlet #outlet="outlet"></router-outlet>
 </main>
 </div>
