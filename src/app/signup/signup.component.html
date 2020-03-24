@@ -9,30 +9,33 @@
 	<div class=" card-header border  rounded-bottom px-lg-5 pt-0  d-flex justify-content-center" style="box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);" >
 
 		<!-- Form -->
-		<form class="text-center col-md-6"  >
+		<form class="text-center col-md-6" #register="ngForm" (ngSubmit)="onSubmit()" >
 
-			
+			<h5>{{studmodel|json}}</h5>
       <!--fname lname-->		
         <div class="md-form mx- p-0">
-					<input type="text" id="materialLoginFormEmail" class="form-control "  style="color:#c51f5d;">
-					<label for="materialLoginFormEmail">First Name</label>
+					<input type="text" required [(ngModel)]="studmodel.name"id="name" name="name" id="materialLoginFormEmail" class="form-control "  style="color:#c51f5d;">
+         
+					<label for="materialLoginFormEmail">Full Name</label>
 				</div>
-        <div class="md-form mx-1 p-0">
-					<input type="email" id="materialLoginFormEmail" class="form-control " style="color:#c51f5d;">
-					<label for="materialLoginFormEmail">Last Name</label>				
-        </div>    
-
+        
 			<!-- Email -->
 			<div class="md-form mx-1">
-				<input type="email" id="materialLoginFormEmail" class="form-control " style="color:#c51f5d;">
+				<input type="email" id="materialLoginFormEmail" class="form-control " style="color:#c51f5d;" [(ngModel)]="studmodel.email" name="email">
 				<label for="materialLoginFormEmail">E-mail</label>
 			</div>
 
 			<!-- Password -->
 			<div class="md-form mx-1">
-				<input type="password" id="materialLoginFormPassword" class="form-control " style="color:#c51f5d;">
+				<input type="password" id="materialLoginFormPassword" class="form-control " style="color:#c51f5d;" [(ngModel)]="studmodel.pswd"  id="pswd" name="pswd">
 				<label for="materialLoginFormPassword">Password</label>
 			</div>
+
+      	<div class="md-form mx-1">
+				<input type="text" id="materialLoginFormPassword" class="form-control " style="color:#c51f5d;" [(ngModel)]="studmodel.branch"  id="branch" name="branch">
+				<label for="materialLoginFormPassword">Branch</label>
+			</div>
+
 
 			<div class="d-flex justify-content-around">
 
