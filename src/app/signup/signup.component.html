@@ -14,9 +14,11 @@
 			<h5>{{studmodel|json}}</h5>
       <!--fname lname-->		
         <div class="md-form mx- p-0">
-					<input type="text" required [(ngModel)]="studmodel.name"id="name" name="name" id="materialLoginFormEmail" class="form-control "  style="color:#c51f5d;">
-         
+					<input type="text" required [(ngModel)]="studmodel.name" id="name" name="name" #name="ngModel" class="form-control "  style="color:#c51f5d;">
 					<label for="materialLoginFormEmail">Full Name</label>
+          <div class="alert alert-danger" [hidden]="name.valid||name.pristine">
+       F name is required
+     </div>
 				</div>
         
 			<!-- Email -->
